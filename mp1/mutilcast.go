@@ -26,12 +26,14 @@ func initBufferedMessageMap() {
 func addToGroup(nodeNumber int, node Node) {
 	multicastGroup[nodeNumber] = node
 	fmt.Println("added ", node.Name, " to the multicast group")
+	log.Println("added ", node.Name, " to the multicast group")
 }
 
 //delete from the group if connection is broken
 func deleteFromGroup(node Node) {
 	delete(multicastGroup, node.Number)
 	fmt.Println("removed ", node.Name, " from the multicast group")
+	log.Println("removed ", node.Name, " from the multicast group")
 	fmt.Println("multicastgroup length = ", len(multicastGroup))
 }
 
@@ -117,6 +119,7 @@ func sendBufferedMessage(node Node) {
 // todo log
 func failureDetection(node Node, err error) {
 	fmt.Println("failure detected - error reading from: ", node.Name, " , error : ", err.Error())
+	log.Println("failure detected - error reading from: ", node.Name, " , error : ", err.Error())
 	if allNodeConnected {
 		deleteFromGroup(node)
 	}
@@ -129,7 +132,6 @@ func checkAllConnectCompleted(nodeNumber int) {
 		if len(connectedNodeNumbers) == len(multicastGroup) {
 			allNodeConnected = true
 			fmt.Println("checkAllConnectCompleted : allNodeConnected")
-
 		}
 	}
 }
@@ -141,7 +143,6 @@ func bufferMessage(priorityMessage PriorityMessage, nodeNumber int) {
 		fmt.Println("test updating Buffered , ", "content = ", priorityMessage.Message, priorityMessage.Priority)
 
 	} else {
-		//	var arrKeyValue = [5]string{3: "Chris", 4: "Ron"}
 		var newBuffered = []PriorityMessage{priorityMessage}
 		//newBuffered = append(newBuffered, priorityMessage)
 		bufferedMessageMap[nodeNumber] = newBuffered
