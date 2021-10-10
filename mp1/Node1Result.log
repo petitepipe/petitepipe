@@ -1,0 +1,473 @@
+2021/10/09 20:44:14 1633830254.507356 - added  node1  to the multicast group
+2021/10/09 20:44:14 1633830254.509950 - added  node2  to the multicast group
+2021/10/09 20:44:14 1633830254.512567 - added  node3  to the multicast group
+2021/10/09 20:44:19 1633830259.738022 - received  message : DEPOSIT z 27 102
+2021/10/09 20:44:19 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT z 27  priority =  401
+2021/10/09 20:44:19 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 401
+2021/10/09 20:44:19 test changedMaxPriority :  DEPOSIT z 27 priority :  -401
+2021/10/09 20:44:19 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:19 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:19 1633830259.739347 - received  message : TRANSFER z -> m 20 202
+2021/10/09 20:44:19 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER z -> m 20  priority =  501
+2021/10/09 20:44:19 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 501
+2021/10/09 20:44:19 test changedMaxPriority :  TRANSFER z -> m 20 priority :  -501
+2021/10/09 20:44:19 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:19 1633830259.739417 - sent msg:  DEPOSIT m 18 101
+2021/10/09 20:44:19 1633830259.739436 - sent msg:  TRANSFER m -> l 17 201
+2021/10/09 20:44:19 1633830259.739449 - sent msg:  TRANSFER l -> j 7 301
+2021/10/09 20:44:19 1633830259.739470 - sent msg:  DEPOSIT z 27 401
+2021/10/09 20:44:19 1633830259.739488 - sent msg:  TRANSFER z -> m 20 501
+2021/10/09 20:44:19 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:19 1633830259.740176 - received  message : DEPOSIT m 18 302
+2021/10/09 20:44:19 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  302
+2021/10/09 20:44:19 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 302
+2021/10/09 20:44:19 test changedMaxPriority :  DEPOSIT m 18 priority :  -302
+2021/10/09 20:44:19 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:19 1633830259.741248 - received  message : TRANSFER m -> l 17 402
+2021/10/09 20:44:19 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER m -> l 17  priority =  402
+2021/10/09 20:44:19 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 402
+2021/10/09 20:44:19 test changedMaxPriority :  TRANSFER m -> l 17 priority :  -402
+2021/10/09 20:44:19 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:19 1633830259.741291 - received  message : TRANSFER l -> j 7 502
+2021/10/09 20:44:19 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER l -> j 7  priority =  502
+2021/10/09 20:44:19 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 502
+2021/10/09 20:44:19 test changedMaxPriority :  TRANSFER l -> j 7 priority :  -502
+2021/10/09 20:44:19 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:20 1633830260.284855 - sent msg:  DEPOSIT b 42 601
+2021/10/09 20:44:20 1633830260.285303 - received  message : DEPOSIT b 42 602
+2021/10/09 20:44:20 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT b 42  priority =  602
+2021/10/09 20:44:20 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 602
+2021/10/09 20:44:20 test changedMaxPriority :  DEPOSIT b 42 priority :  -602
+2021/10/09 20:44:20 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:21 1633830261.884415 - sent msg:  TRANSFER j -> b 7 701
+2021/10/09 20:44:21 1633830261.884883 - received  message : TRANSFER j -> b 7 702
+2021/10/09 20:44:21 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER j -> b 7  priority =  702
+2021/10/09 20:44:21 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 702
+2021/10/09 20:44:21 test changedMaxPriority :  TRANSFER j -> b 7 priority :  -702
+2021/10/09 20:44:21 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:21 1633830261.968387 - sent msg:  DEPOSIT r 55 801
+2021/10/09 20:44:21 1633830261.968808 - received  message : DEPOSIT r 55 802
+2021/10/09 20:44:21 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT r 55  priority =  802
+2021/10/09 20:44:21 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 802
+2021/10/09 20:44:21 test changedMaxPriority :  DEPOSIT r 55 priority :  -802
+2021/10/09 20:44:21 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:22 1633830262.237011 - sent msg:  TRANSFER l -> p 8 901
+2021/10/09 20:44:22 1633830262.239622 - received  message : TRANSFER l -> p 8 902
+2021/10/09 20:44:22 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER l -> p 8  priority =  902
+2021/10/09 20:44:22 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 902
+2021/10/09 20:44:22 test changedMaxPriority :  TRANSFER l -> p 8 priority :  -902
+2021/10/09 20:44:22 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:22 1633830262.300596 - received  message : DEPOSIT c 14 1002
+2021/10/09 20:44:22 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT c 14  priority =  1001
+2021/10/09 20:44:22 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 1002
+2021/10/09 20:44:22 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:22 1633830262.300667 - sent msg:  DEPOSIT c 14 1001
+2021/10/09 20:44:22 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.358867 - received  message : TRANSFER c -> w 10 1102
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER c -> w 10  priority =  1101
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 1102
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.359758 - sent msg:  TRANSFER c -> w 10 1101
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.450203 - received  message : DEPOSIT x 23 103
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT x 23  priority =  1201
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 1201
+2021/10/09 20:44:24 test changedMaxPriority :  DEPOSIT x 23 priority :  -1201
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.450283 - sent msg:  DEPOSIT x 23 1201
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.450929 - received  message : DEPOSIT k 2 203
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT k 2  priority =  1301
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 1301
+2021/10/09 20:44:24 test changedMaxPriority :  DEPOSIT k 2 priority :  -1301
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.450988 - sent msg:  DEPOSIT k 2 1301
+2021/10/09 20:44:24 1633830264.451004 - sent msg:  DEPOSIT m 18 101
+2021/10/09 20:44:24 1633830264.451027 - sent msg:  TRANSFER m -> l 17 201
+2021/10/09 20:44:24 1633830264.451045 - sent msg:  TRANSFER l -> j 7 301
+2021/10/09 20:44:24 1633830264.451090 - sent msg:  DEPOSIT z 27 401
+2021/10/09 20:44:24 1633830264.451103 - sent msg:  TRANSFER z -> m 20 501
+2021/10/09 20:44:24 1633830264.451118 - sent msg:  DEPOSIT b 42 601
+2021/10/09 20:44:24 1633830264.451136 - sent msg:  TRANSFER j -> b 7 701
+2021/10/09 20:44:24 1633830264.451160 - sent msg:  DEPOSIT r 55 801
+2021/10/09 20:44:24 1633830264.451177 - sent msg:  TRANSFER l -> p 8 901
+2021/10/09 20:44:24 1633830264.451205 - sent msg:  DEPOSIT c 14 1001
+2021/10/09 20:44:24 1633830264.451223 - sent msg:  TRANSFER c -> w 10 1101
+2021/10/09 20:44:24 1633830264.451243 - sent msg:  DEPOSIT x 23 1201
+2021/10/09 20:44:24 1633830264.451280 - sent msg:  DEPOSIT k 2 1301
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.451305 - received  message : DEPOSIT x 23 1202
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT x 23  priority =  1202
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1202
+2021/10/09 20:44:24 test changedMaxPriority :  DEPOSIT x 23 priority :  -1202
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.451360 - received  message : DEPOSIT k 2 1302
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT k 2  priority =  1302
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1302
+2021/10/09 20:44:24 test changedMaxPriority :  DEPOSIT k 2 priority :  -1302
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.452549 - received  message : DEPOSIT z 27 303
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT z 27  priority =  303
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 401
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.452592 - received  message : TRANSFER z -> m 20 403
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER z -> m 20  priority =  403
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 501
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.452634 - received  message : DEPOSIT m 18 503
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  503
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 503
+2021/10/09 20:44:24 test changedMaxPriority :  DEPOSIT m 18 priority :  -503
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT m 18  priority =  -101
+2021/10/09 20:44:24 1633830264.452667 - Delivered:  DEPOSIT m 18
+2021/10/09 20:44:24 1633830264.452680 - BALANCES  m:18 
+2021/10/09 20:44:24 1633830264.452685 - received  message : TRANSFER m -> l 17 603
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER m -> l 17  priority =  603
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 603
+2021/10/09 20:44:24 test changedMaxPriority :  TRANSFER m -> l 17 priority :  -603
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT z 27  priority =  -102
+2021/10/09 20:44:24 1633830264.452718 - Delivered:  DEPOSIT z 27
+2021/10/09 20:44:24 1633830264.452728 - BALANCES  m:18 z:27 
+2021/10/09 20:44:24 1633830264.452733 - received  message : TRANSFER l -> j 7 703
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER l -> j 7  priority =  703
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 703
+2021/10/09 20:44:24 test changedMaxPriority :  TRANSFER l -> j 7 priority :  -703
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT x 23  priority =  -103
+2021/10/09 20:44:24 1633830264.452776 - Delivered:  DEPOSIT x 23
+2021/10/09 20:44:24 1633830264.452787 - BALANCES  m:18 x:23 z:27 
+2021/10/09 20:44:24 1633830264.454158 - received  message : DEPOSIT b 42 803
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT b 42  priority =  803
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 803
+2021/10/09 20:44:24 test changedMaxPriority :  DEPOSIT b 42 priority :  -803
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  TRANSFER m -> l 17  priority =  -201
+2021/10/09 20:44:24 1633830264.454220 - Delivered:  TRANSFER m -> l 17
+2021/10/09 20:44:24 1633830264.454238 - BALANCES  l:17 m:18 x:23 z:27 
+2021/10/09 20:44:24 1633830264.454248 - received  message : TRANSFER j -> b 7 903
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER j -> b 7  priority =  903
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 903
+2021/10/09 20:44:24 test changedMaxPriority :  TRANSFER j -> b 7 priority :  -903
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  TRANSFER z -> m 20  priority =  -202
+2021/10/09 20:44:24 1633830264.454281 - Delivered:  TRANSFER z -> m 20
+2021/10/09 20:44:24 1633830264.454294 - BALANCES  l:17 m:38 x:23 z:7 
+2021/10/09 20:44:24 1633830264.454503 - received  message : DEPOSIT r 55 1003
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT r 55  priority =  1003
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1003
+2021/10/09 20:44:24 test changedMaxPriority :  DEPOSIT r 55 priority :  -1003
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT k 2  priority =  -203
+2021/10/09 20:44:24 1633830264.454561 - Delivered:  DEPOSIT k 2
+2021/10/09 20:44:24 1633830264.454577 - BALANCES  k:2 l:17 m:38 x:23 z:7 
+2021/10/09 20:44:24 1633830264.454584 - received  message : TRANSFER l -> p 8 1103
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER l -> p 8  priority =  1103
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1103
+2021/10/09 20:44:24 test changedMaxPriority :  TRANSFER l -> p 8 priority :  -1103
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  TRANSFER l -> j 7  priority =  -301
+2021/10/09 20:44:24 1633830264.454627 - Delivered:  TRANSFER l -> j 7
+2021/10/09 20:44:24 1633830264.454655 - BALANCES  j:7 k:2 l:17 m:38 x:23 z:7 
+2021/10/09 20:44:24 1633830264.454664 - received  message : DEPOSIT c 14 1203
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT c 14  priority =  1203
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1203
+2021/10/09 20:44:24 test changedMaxPriority :  DEPOSIT c 14 priority :  -1203
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT b 42  priority =  -601
+2021/10/09 20:44:24 1633830264.454696 - Delivered:  DEPOSIT b 42
+2021/10/09 20:44:24 1633830264.454714 - BALANCES  b:42 j:7 k:2 l:17 m:38 x:23 z:7 
+2021/10/09 20:44:24 1633830264.457730 - received  message : TRANSFER c -> w 10 1303
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER c -> w 10  priority =  1303
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1303
+2021/10/09 20:44:24 test changedMaxPriority :  TRANSFER c -> w 10 priority :  -1303
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  TRANSFER j -> b 7  priority =  -701
+2021/10/09 20:44:24 1633830264.457774 - Delivered:  TRANSFER j -> b 7
+2021/10/09 20:44:24 1633830264.457800 - BALANCES  b:49 j:0 k:2 l:17 m:38 x:23 z:7 
+2021/10/09 20:44:24 1633830264.554404 - sent msg:  DEPOSIT h 60 1401
+2021/10/09 20:44:24 1633830264.554432 - sent msg:  DEPOSIT h 60 1401
+2021/10/09 20:44:24 1633830264.554983 - received  message : DEPOSIT h 60 1402
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT h 60  priority =  1402
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 1402
+2021/10/09 20:44:24 test changedMaxPriority :  DEPOSIT h 60 priority :  -1402
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT r 55  priority =  -801
+2021/10/09 20:44:24 1633830264.555023 - Delivered:  DEPOSIT r 55
+2021/10/09 20:44:24 1633830264.555051 - BALANCES  b:49 j:0 k:2 l:17 m:38 r:55 x:23 z:7 
+2021/10/09 20:44:24 1633830264.555062 - received  message : DEPOSIT h 60 1403
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT h 60  priority =  1403
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1403
+2021/10/09 20:44:24 test changedMaxPriority :  DEPOSIT h 60 priority :  -1403
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  TRANSFER l -> p 8  priority =  -901
+2021/10/09 20:44:24 1633830264.555102 - Delivered:  TRANSFER l -> p 8
+2021/10/09 20:44:24 1633830264.555126 - BALANCES  b:49 j:0 k:2 l:17 m:38 p:8 r:55 x:23 z:7 
+2021/10/09 20:44:24 1633830264.899458 - received  message : TRANSFER w -> q 8 1502
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER w -> q 8  priority =  1501
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 1502
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT c 14  priority =  -1002
+2021/10/09 20:44:24 1633830264.899509 - Delivered:  DEPOSIT c 14
+2021/10/09 20:44:24 1633830264.899539 - BALANCES  b:49 c:14 j:0 k:2 l:17 m:38 p:8 r:55 x:23 z:7 
+2021/10/09 20:44:24 1633830264.899570 - sent msg:  TRANSFER w -> q 8 1501
+2021/10/09 20:44:24 1633830264.899584 - sent msg:  TRANSFER w -> q 8 1501
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  TRANSFER c -> w 10  priority =  -1102
+2021/10/09 20:44:24 1633830264.899612 - Delivered:  TRANSFER c -> w 10
+2021/10/09 20:44:24 1633830264.899643 - BALANCES  b:49 c:14 j:0 k:2 l:17 m:38 p:8 r:55 w:10 x:23 z:7 
+2021/10/09 20:44:24 1633830264.900330 - received  message : TRANSFER w -> q 8 1503
+2021/10/09 20:44:24 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER w -> q 8  priority =  1503
+2021/10/09 20:44:24 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1503
+2021/10/09 20:44:24 test changedMaxPriority :  TRANSFER w -> q 8 priority :  -1503
+2021/10/09 20:44:24 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT h 60  priority =  -1401
+2021/10/09 20:44:24 1633830264.900372 - Delivered:  DEPOSIT h 60
+2021/10/09 20:44:24 1633830264.900401 - BALANCES  b:49 c:14 h:60 j:0 k:2 l:17 m:38 p:8 r:55 w:10 x:23 z:7 
+2021/10/09 20:44:25 1633830265.322804 - received  message : TRANSFER k -> c 1 1603
+2021/10/09 20:44:25 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER k -> c 1  priority =  1601
+2021/10/09 20:44:25 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 1603
+2021/10/09 20:44:25 test MessageReceivedCount receivedNodeArray : message =  TRANSFER w -> q 8  priority =  -1502
+2021/10/09 20:44:25 1633830265.322859 - Delivered:  TRANSFER w -> q 8
+2021/10/09 20:44:25 1633830265.322894 - BALANCES  b:49 c:14 h:60 j:0 k:2 l:17 m:38 p:8 q:8 r:55 w:10 x:23 z:7 
+2021/10/09 20:44:25 1633830265.322924 - sent msg:  TRANSFER k -> c 1 1601
+2021/10/09 20:44:25 1633830265.322937 - sent msg:  TRANSFER k -> c 1 1601
+2021/10/09 20:44:25 1633830265.323677 - received  message : TRANSFER k -> c 1 1602
+2021/10/09 20:44:25 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER k -> c 1  priority =  1602
+2021/10/09 20:44:25 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1603
+2021/10/09 20:44:25 1633830265.697659 - received  message : TRANSFER c -> j 2 1702
+2021/10/09 20:44:25 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER c -> j 2  priority =  1701
+2021/10/09 20:44:25 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 1702
+2021/10/09 20:44:25 test MessageReceivedCount receivedNodeArray : message =  TRANSFER k -> c 1  priority =  -1603
+2021/10/09 20:44:25 1633830265.697712 - Delivered:  TRANSFER k -> c 1
+2021/10/09 20:44:25 1633830265.697763 - BALANCES  b:49 c:15 h:60 j:0 k:1 l:17 m:38 p:8 q:8 r:55 w:10 x:23 z:7 
+2021/10/09 20:44:25 1633830265.697795 - sent msg:  TRANSFER c -> j 2 1701
+2021/10/09 20:44:25 1633830265.697813 - sent msg:  TRANSFER c -> j 2 1701
+2021/10/09 20:44:25 1633830265.697877 - received  message : TRANSFER c -> j 2 1703
+2021/10/09 20:44:25 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER c -> j 2  priority =  1703
+2021/10/09 20:44:25 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1703
+2021/10/09 20:44:25 test changedMaxPriority :  TRANSFER c -> j 2 priority :  -1703
+2021/10/09 20:44:26 1633830266.365089 - sent msg:  DEPOSIT w 86 1801
+2021/10/09 20:44:26 1633830266.365133 - sent msg:  DEPOSIT w 86 1801
+2021/10/09 20:44:26 1633830266.365492 - received  message : DEPOSIT w 86 1802
+2021/10/09 20:44:26 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT w 86  priority =  1802
+2021/10/09 20:44:26 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 1802
+2021/10/09 20:44:26 test changedMaxPriority :  DEPOSIT w 86 priority :  -1802
+2021/10/09 20:44:26 test MessageReceivedCount receivedNodeArray : message =  TRANSFER c -> j 2  priority =  -1702
+2021/10/09 20:44:26 1633830266.365560 - Delivered:  TRANSFER c -> j 2
+2021/10/09 20:44:26 1633830266.365594 - BALANCES  b:49 c:13 h:60 j:2 k:1 l:17 m:38 p:8 q:8 r:55 w:10 x:23 z:7 
+2021/10/09 20:44:26 1633830266.365617 - received  message : DEPOSIT w 86 1803
+2021/10/09 20:44:26 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT w 86  priority =  1803
+2021/10/09 20:44:26 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1803
+2021/10/09 20:44:26 test changedMaxPriority :  DEPOSIT w 86 priority :  -1803
+2021/10/09 20:44:26 1633830266.365913 - received  message : DEPOSIT r 19 1903
+2021/10/09 20:44:26 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT r 19  priority =  1901
+2021/10/09 20:44:26 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 1903
+2021/10/09 20:44:26 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT w 86  priority =  -1801
+2021/10/09 20:44:26 1633830266.365969 - Delivered:  DEPOSIT w 86
+2021/10/09 20:44:26 1633830266.366001 - BALANCES  b:49 c:13 h:60 j:2 k:1 l:17 m:38 p:8 q:8 r:55 w:96 x:23 z:7 
+2021/10/09 20:44:26 1633830266.366022 - sent msg:  DEPOSIT r 19 1901
+2021/10/09 20:44:26 1633830266.366038 - sent msg:  DEPOSIT r 19 1901
+2021/10/09 20:44:26 1633830266.366050 - received  message : DEPOSIT r 19 1902
+2021/10/09 20:44:26 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT r 19  priority =  1902
+2021/10/09 20:44:26 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 1903
+2021/10/09 20:44:27 1633830267.778065 - sent msg:  TRANSFER w -> s 3 2001
+2021/10/09 20:44:27 1633830267.778115 - sent msg:  TRANSFER w -> s 3 2001
+2021/10/09 20:44:27 1633830267.778715 - received  message : TRANSFER w -> s 3 2002
+2021/10/09 20:44:27 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER w -> s 3  priority =  2002
+2021/10/09 20:44:27 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 2002
+2021/10/09 20:44:27 test changedMaxPriority :  TRANSFER w -> s 3 priority :  -2002
+2021/10/09 20:44:27 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT r 19  priority =  -1903
+2021/10/09 20:44:27 1633830267.778769 - Delivered:  DEPOSIT r 19
+2021/10/09 20:44:27 1633830267.778812 - BALANCES  b:49 c:13 h:60 j:2 k:1 l:17 m:38 p:8 q:8 r:74 w:96 x:23 z:7 
+2021/10/09 20:44:27 1633830267.785811 - received  message : TRANSFER w -> s 3 2003
+2021/10/09 20:44:27 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER w -> s 3  priority =  2003
+2021/10/09 20:44:27 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 2003
+2021/10/09 20:44:27 test changedMaxPriority :  TRANSFER w -> s 3 priority :  -2003
+2021/10/09 20:44:27 1633830267.992820 - received  message : TRANSFER r -> l 17 2103
+2021/10/09 20:44:27 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER r -> l 17  priority =  2101
+2021/10/09 20:44:27 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 2103
+2021/10/09 20:44:27 test MessageReceivedCount receivedNodeArray : message =  TRANSFER w -> s 3  priority =  -2001
+2021/10/09 20:44:27 1633830267.992877 - Delivered:  TRANSFER w -> s 3
+2021/10/09 20:44:27 1633830267.992917 - BALANCES  b:49 c:13 h:60 j:2 k:1 l:17 m:38 p:8 q:8 r:74 s:3 w:96 x:23 z:7 
+2021/10/09 20:44:27 1633830267.992947 - sent msg:  TRANSFER r -> l 17 2101
+2021/10/09 20:44:27 1633830267.992965 - sent msg:  TRANSFER r -> l 17 2101
+2021/10/09 20:44:27 1633830267.993593 - received  message : TRANSFER r -> l 17 2102
+2021/10/09 20:44:27 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER r -> l 17  priority =  2102
+2021/10/09 20:44:27 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 2103
+2021/10/09 20:44:28 1633830268.676551 - received  message : TRANSFER m -> z 1 2202
+2021/10/09 20:44:28 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER m -> z 1  priority =  2201
+2021/10/09 20:44:28 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 2202
+2021/10/09 20:44:28 test MessageReceivedCount receivedNodeArray : message =  TRANSFER r -> l 17  priority =  -2103
+2021/10/09 20:44:28 1633830268.676615 - Delivered:  TRANSFER r -> l 17
+2021/10/09 20:44:28 1633830268.676653 - BALANCES  b:49 c:13 h:60 j:2 k:1 l:34 m:38 p:8 q:8 r:57 s:3 w:96 x:23 z:7 
+2021/10/09 20:44:28 1633830268.676684 - sent msg:  TRANSFER m -> z 1 2201
+2021/10/09 20:44:28 1633830268.676701 - sent msg:  TRANSFER m -> z 1 2201
+2021/10/09 20:44:28 1633830268.685759 - received  message : TRANSFER m -> z 1 2203
+2021/10/09 20:44:28 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER m -> z 1  priority =  2203
+2021/10/09 20:44:28 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 2203
+2021/10/09 20:44:28 test changedMaxPriority :  TRANSFER m -> z 1 priority :  -2203
+2021/10/09 20:44:28 1633830268.868593 - received  message : DEPOSIT h 30 2302
+2021/10/09 20:44:28 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT h 30  priority =  2301
+2021/10/09 20:44:28 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 2302
+2021/10/09 20:44:28 test MessageReceivedCount receivedNodeArray : message =  TRANSFER m -> z 1  priority =  -2202
+2021/10/09 20:44:28 1633830268.868654 - Delivered:  TRANSFER m -> z 1
+2021/10/09 20:44:28 1633830268.868691 - BALANCES  b:49 c:13 h:60 j:2 k:1 l:34 m:37 p:8 q:8 r:57 s:3 w:96 x:23 z:8 
+2021/10/09 20:44:28 1633830268.868720 - sent msg:  DEPOSIT h 30 2301
+2021/10/09 20:44:28 1633830268.868733 - sent msg:  DEPOSIT h 30 2301
+2021/10/09 20:44:28 1633830268.878761 - received  message : DEPOSIT h 30 2303
+2021/10/09 20:44:28 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT h 30  priority =  2303
+2021/10/09 20:44:28 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 2303
+2021/10/09 20:44:28 test changedMaxPriority :  DEPOSIT h 30 priority :  -2303
+2021/10/09 20:44:28 1633830268.879169 - received  message : TRANSFER x -> r 2 2403
+2021/10/09 20:44:28 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER x -> r 2  priority =  2401
+2021/10/09 20:44:28 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 2403
+2021/10/09 20:44:28 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT h 30  priority =  -2302
+2021/10/09 20:44:28 1633830268.879212 - Delivered:  DEPOSIT h 30
+2021/10/09 20:44:28 1633830268.879250 - BALANCES  b:49 c:13 h:90 j:2 k:1 l:34 m:37 p:8 q:8 r:57 s:3 w:96 x:23 z:8 
+2021/10/09 20:44:28 1633830268.879275 - sent msg:  TRANSFER x -> r 2 2401
+2021/10/09 20:44:28 1633830268.879293 - sent msg:  TRANSFER x -> r 2 2401
+2021/10/09 20:44:28 1633830268.879578 - received  message : TRANSFER x -> r 2 2402
+2021/10/09 20:44:28 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER x -> r 2  priority =  2402
+2021/10/09 20:44:28 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 2403
+2021/10/09 20:44:29 1633830269.200936 - sent msg:  TRANSFER p -> r 4 2501
+2021/10/09 20:44:29 1633830269.200980 - sent msg:  TRANSFER p -> r 4 2501
+2021/10/09 20:44:29 1633830269.201425 - received  message : TRANSFER p -> r 4 2502
+2021/10/09 20:44:29 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER p -> r 4  priority =  2502
+2021/10/09 20:44:29 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 2502
+2021/10/09 20:44:29 test changedMaxPriority :  TRANSFER p -> r 4 priority :  -2502
+2021/10/09 20:44:29 test MessageReceivedCount receivedNodeArray : message =  TRANSFER x -> r 2  priority =  -2403
+2021/10/09 20:44:29 1633830269.201466 - Delivered:  TRANSFER x -> r 2
+2021/10/09 20:44:29 1633830269.201501 - BALANCES  b:49 c:13 h:90 j:2 k:1 l:34 m:37 p:8 q:8 r:59 s:3 w:96 x:21 z:8 
+2021/10/09 20:44:29 1633830269.210731 - received  message : TRANSFER p -> r 4 2503
+2021/10/09 20:44:29 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER p -> r 4  priority =  2503
+2021/10/09 20:44:29 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 2503
+2021/10/09 20:44:29 test changedMaxPriority :  TRANSFER p -> r 4 priority :  -2503
+2021/10/09 20:44:30 1633830270.598817 - received  message : TRANSFER k -> x 1 2603
+2021/10/09 20:44:30 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER k -> x 1  priority =  2601
+2021/10/09 20:44:30 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 2603
+2021/10/09 20:44:30 test MessageReceivedCount receivedNodeArray : message =  TRANSFER p -> r 4  priority =  -2501
+2021/10/09 20:44:30 1633830270.598868 - Delivered:  TRANSFER p -> r 4
+2021/10/09 20:44:30 1633830270.598917 - BALANCES  b:49 c:13 h:90 j:2 k:1 l:34 m:37 p:4 q:8 r:63 s:3 w:96 x:21 z:8 
+2021/10/09 20:44:30 1633830270.598942 - sent msg:  TRANSFER k -> x 1 2601
+2021/10/09 20:44:30 1633830270.598968 - sent msg:  TRANSFER k -> x 1 2601
+2021/10/09 20:44:30 1633830270.599770 - received  message : TRANSFER k -> x 1 2602
+2021/10/09 20:44:30 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER k -> x 1  priority =  2602
+2021/10/09 20:44:30 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 2603
+2021/10/09 20:44:31 1633830271.865321 - received  message : TRANSFER c -> e 2 2702
+2021/10/09 20:44:31 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER c -> e 2  priority =  2701
+2021/10/09 20:44:31 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 2702
+2021/10/09 20:44:31 test MessageReceivedCount receivedNodeArray : message =  TRANSFER k -> x 1  priority =  -2603
+2021/10/09 20:44:31 1633830271.865375 - Delivered:  TRANSFER k -> x 1
+2021/10/09 20:44:31 1633830271.865413 - BALANCES  b:49 c:13 h:90 j:2 k:0 l:34 m:37 p:4 q:8 r:63 s:3 w:96 x:22 z:8 
+2021/10/09 20:44:31 1633830271.865443 - sent msg:  TRANSFER c -> e 2 2701
+2021/10/09 20:44:31 1633830271.865462 - sent msg:  TRANSFER c -> e 2 2701
+2021/10/09 20:44:31 1633830271.867480 - received  message : TRANSFER c -> e 2 2703
+2021/10/09 20:44:31 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER c -> e 2  priority =  2703
+2021/10/09 20:44:31 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 2703
+2021/10/09 20:44:31 test changedMaxPriority :  TRANSFER c -> e 2 priority :  -2703
+2021/10/09 20:44:35 1633830275.267810 - sent msg:  TRANSFER l -> z 1 2801
+2021/10/09 20:44:35 1633830275.267852 - sent msg:  TRANSFER l -> z 1 2801
+2021/10/09 20:44:35 1633830275.268529 - received  message : TRANSFER l -> z 1 2803
+2021/10/09 20:44:35 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER l -> z 1  priority =  2803
+2021/10/09 20:44:35 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 2803
+2021/10/09 20:44:35 test changedMaxPriority :  TRANSFER l -> z 1 priority :  -2803
+2021/10/09 20:44:35 test MessageReceivedCount receivedNodeArray : message =  TRANSFER c -> e 2  priority =  -2702
+2021/10/09 20:44:35 1633830275.268577 - Delivered:  TRANSFER c -> e 2
+2021/10/09 20:44:35 1633830275.268628 - BALANCES  b:49 c:13 e:2 h:90 j:2 k:0 l:34 m:37 p:4 q:8 r:63 s:3 w:96 x:22 z:8 
+2021/10/09 20:44:35 1633830275.268646 - received  message : TRANSFER l -> z 1 2802
+2021/10/09 20:44:35 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER l -> z 1  priority =  2802
+2021/10/09 20:44:35 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 2803
+2021/10/09 20:44:36 1633830276.767816 - sent msg:  TRANSFER r -> b 46 2901
+2021/10/09 20:44:36 1633830276.767867 - sent msg:  TRANSFER r -> b 46 2901
+2021/10/09 20:44:36 1633830276.768278 - received  message : TRANSFER r -> b 46 2903
+2021/10/09 20:44:36 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER r -> b 46  priority =  2903
+2021/10/09 20:44:36 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 2903
+2021/10/09 20:44:36 test changedMaxPriority :  TRANSFER r -> b 46 priority :  -2903
+2021/10/09 20:44:36 test MessageReceivedCount receivedNodeArray : message =  TRANSFER l -> z 1  priority =  -2801
+2021/10/09 20:44:36 1633830276.768326 - Delivered:  TRANSFER l -> z 1
+2021/10/09 20:44:36 1633830276.768365 - BALANCES  b:49 c:13 e:2 h:90 j:2 k:0 l:33 m:37 p:4 q:8 r:63 s:3 w:96 x:22 z:9 
+2021/10/09 20:44:36 1633830276.768378 - received  message : TRANSFER r -> b 46 2902
+2021/10/09 20:44:36 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER r -> b 46  priority =  2902
+2021/10/09 20:44:36 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 2903
+2021/10/09 20:44:36 1633830276.850074 - sent msg:  TRANSFER w -> o 25 3001
+2021/10/09 20:44:36 1633830276.850104 - sent msg:  TRANSFER w -> o 25 3001
+2021/10/09 20:44:36 1633830276.850384 - received  message : TRANSFER w -> o 25 3002
+2021/10/09 20:44:36 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER w -> o 25  priority =  3002
+2021/10/09 20:44:36 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 3002
+2021/10/09 20:44:36 test changedMaxPriority :  TRANSFER w -> o 25 priority :  -3002
+2021/10/09 20:44:36 test MessageReceivedCount receivedNodeArray : message =  TRANSFER r -> b 46  priority =  -2901
+2021/10/09 20:44:36 1633830276.850430 - Delivered:  TRANSFER r -> b 46
+2021/10/09 20:44:36 1633830276.850468 - BALANCES  b:95 c:13 e:2 h:90 j:2 k:0 l:33 m:37 p:4 q:8 r:17 s:3 w:96 x:22 z:9 
+2021/10/09 20:44:36 1633830276.850482 - received  message : TRANSFER w -> o 25 3003
+2021/10/09 20:44:36 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER w -> o 25  priority =  3003
+2021/10/09 20:44:36 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 3003
+2021/10/09 20:44:36 test changedMaxPriority :  TRANSFER w -> o 25 priority :  -3003
+2021/10/09 20:44:37 1633830277.433312 - received  message : DEPOSIT z 31 3103
+2021/10/09 20:44:37 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT z 31  priority =  3101
+2021/10/09 20:44:37 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 3103
+2021/10/09 20:44:37 test MessageReceivedCount receivedNodeArray : message =  TRANSFER w -> o 25  priority =  -3001
+2021/10/09 20:44:37 1633830277.433383 - Delivered:  TRANSFER w -> o 25
+2021/10/09 20:44:37 1633830277.433423 - BALANCES  b:95 c:13 e:2 h:90 j:2 k:0 l:33 m:37 o:25 p:4 q:8 r:17 s:3 w:96 x:22 z:9 
+2021/10/09 20:44:37 1633830277.433451 - sent msg:  DEPOSIT z 31 3101
+2021/10/09 20:44:37 1633830277.433464 - sent msg:  DEPOSIT z 31 3101
+2021/10/09 20:44:37 1633830277.433835 - received  message : DEPOSIT z 31 3102
+2021/10/09 20:44:37 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT z 31  priority =  3102
+2021/10/09 20:44:37 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 3103
+2021/10/09 20:44:38 1633830278.487906 - sent msg:  TRANSFER l -> x 1 3201
+2021/10/09 20:44:38 1633830278.487952 - sent msg:  TRANSFER l -> x 1 3201
+2021/10/09 20:44:38 1633830278.488296 - received  message : TRANSFER l -> x 1 3202
+2021/10/09 20:44:38 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER l -> x 1  priority =  3202
+2021/10/09 20:44:38 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 3202
+2021/10/09 20:44:38 test changedMaxPriority :  TRANSFER l -> x 1 priority :  -3202
+2021/10/09 20:44:38 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT z 31  priority =  -3103
+2021/10/09 20:44:38 1633830278.488362 - Delivered:  DEPOSIT z 31
+2021/10/09 20:44:38 1633830278.488408 - BALANCES  b:95 c:13 e:2 h:90 j:2 k:0 l:33 m:37 o:25 p:4 q:8 r:17 s:3 w:96 x:22 z:40 
+2021/10/09 20:44:38 1633830278.488424 - received  message : TRANSFER l -> x 1 3203
+2021/10/09 20:44:38 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER l -> x 1  priority =  3203
+2021/10/09 20:44:38 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 3203
+2021/10/09 20:44:38 test changedMaxPriority :  TRANSFER l -> x 1 priority :  -3203
+2021/10/09 20:44:38 1633830278.523592 - sent msg:  TRANSFER z -> o 1 3301
+2021/10/09 20:44:38 1633830278.523634 - sent msg:  TRANSFER z -> o 1 3301
+2021/10/09 20:44:38 1633830278.524041 - received  message : TRANSFER z -> o 1 3303
+2021/10/09 20:44:38 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER z -> o 1  priority =  3303
+2021/10/09 20:44:38 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 3303
+2021/10/09 20:44:38 test changedMaxPriority :  TRANSFER z -> o 1 priority :  -3303
+2021/10/09 20:44:38 test MessageReceivedCount receivedNodeArray : message =  TRANSFER l -> x 1  priority =  -3201
+2021/10/09 20:44:38 1633830278.524080 - Delivered:  TRANSFER l -> x 1
+2021/10/09 20:44:38 1633830278.524117 - BALANCES  b:95 c:13 e:2 h:90 j:2 k:0 l:32 m:37 o:25 p:4 q:8 r:17 s:3 w:96 x:23 z:40 
+2021/10/09 20:44:38 1633830278.524128 - received  message : TRANSFER z -> o 1 3302
+2021/10/09 20:44:38 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER z -> o 1  priority =  3302
+2021/10/09 20:44:38 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 3303
+2021/10/09 20:44:38 1633830278.905672 - received  message : TRANSFER q -> c 8 3402
+2021/10/09 20:44:38 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER q -> c 8  priority =  3401
+2021/10/09 20:44:38 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 3402
+2021/10/09 20:44:38 test MessageReceivedCount receivedNodeArray : message =  TRANSFER z -> o 1  priority =  -3301
+2021/10/09 20:44:38 1633830278.905732 - Delivered:  TRANSFER z -> o 1
+2021/10/09 20:44:38 1633830278.905775 - BALANCES  b:95 c:13 e:2 h:90 j:2 k:0 l:32 m:37 o:26 p:4 q:8 r:17 s:3 w:96 x:23 z:39 
+2021/10/09 20:44:38 1633830278.905802 - sent msg:  TRANSFER q -> c 8 3401
+2021/10/09 20:44:38 1633830278.905819 - sent msg:  TRANSFER q -> c 8 3401
+2021/10/09 20:44:38 1633830278.906120 - received  message : TRANSFER q -> c 8 3403
+2021/10/09 20:44:38 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER q -> c 8  priority =  3403
+2021/10/09 20:44:38 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 3403
+2021/10/09 20:44:38 test changedMaxPriority :  TRANSFER q -> c 8 priority :  -3403
+2021/10/09 20:44:39 1633830279.448925 - received  message : DEPOSIT d 97 3503
+2021/10/09 20:44:39 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT d 97  priority =  3501
+2021/10/09 20:44:39 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 3503
+2021/10/09 20:44:39 test MessageReceivedCount receivedNodeArray : message =  TRANSFER q -> c 8  priority =  -3402
+2021/10/09 20:44:39 1633830279.448981 - Delivered:  TRANSFER q -> c 8
+2021/10/09 20:44:39 1633830279.449023 - BALANCES  b:95 c:21 e:2 h:90 j:2 k:0 l:32 m:37 o:26 p:4 q:0 r:17 s:3 w:96 x:23 z:39 
+2021/10/09 20:44:39 1633830279.449072 - sent msg:  DEPOSIT d 97 3501
+2021/10/09 20:44:39 1633830279.449090 - sent msg:  DEPOSIT d 97 3501
+2021/10/09 20:44:39 1633830279.449451 - received  message : DEPOSIT d 97 3502
+2021/10/09 20:44:39 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT d 97  priority =  3502
+2021/10/09 20:44:39 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 3503
+2021/10/09 20:44:40 1633830280.276827 - received  message : TRANSFER d -> s 89 3603
+2021/10/09 20:44:40 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER d -> s 89  priority =  3601
+2021/10/09 20:44:40 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 3603
+2021/10/09 20:44:40 test MessageReceivedCount receivedNodeArray : message =  DEPOSIT d 97  priority =  -3503
+2021/10/09 20:44:40 1633830280.276884 - Delivered:  DEPOSIT d 97
+2021/10/09 20:44:40 1633830280.276927 - BALANCES  b:95 c:21 d:97 e:2 h:90 j:2 k:0 l:32 m:37 o:26 p:4 q:0 r:17 s:3 w:96 x:23 z:39 
+2021/10/09 20:44:40 1633830280.276959 - sent msg:  TRANSFER d -> s 89 3601
+2021/10/09 20:44:40 1633830280.276978 - sent msg:  TRANSFER d -> s 89 3601
+2021/10/09 20:44:40 1633830280.277851 - received  message : TRANSFER d -> s 89 3602
+2021/10/09 20:44:40 test updateMessageReceivedCount receivedNodeArray : message =  TRANSFER d -> s 89  priority =  3602
+2021/10/09 20:44:40 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 3603
+2021/10/09 20:44:40 1633830280.463587 - received  message : DEPOSIT z 74 3703
+2021/10/09 20:44:40 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT z 74  priority =  3701
+2021/10/09 20:44:40 test updateMessageReceivedCount : length of receivedNodeArray :  2 max priority : 3703
+2021/10/09 20:44:40 test MessageReceivedCount receivedNodeArray : message =  TRANSFER d -> s 89  priority =  -3603
+2021/10/09 20:44:40 1633830280.463651 - Delivered:  TRANSFER d -> s 89
+2021/10/09 20:44:40 1633830280.463698 - BALANCES  b:95 c:21 d:8 e:2 h:90 j:2 k:0 l:32 m:37 o:26 p:4 q:0 r:17 s:92 w:96 x:23 z:39 
+2021/10/09 20:44:40 1633830280.463729 - sent msg:  DEPOSIT z 74 3701
+2021/10/09 20:44:40 1633830280.463747 - sent msg:  DEPOSIT z 74 3701
+2021/10/09 20:44:40 1633830280.464093 - received  message : DEPOSIT z 74 3702
+2021/10/09 20:44:40 test updateMessageReceivedCount receivedNodeArray : message =  DEPOSIT z 74  priority =  3702
+2021/10/09 20:44:40 test updateMessageReceivedCount : length of receivedNodeArray :  3 max priority : 3703
