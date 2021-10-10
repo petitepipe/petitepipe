@@ -9,10 +9,10 @@ import (
 
 // An Item is something we manage in a priority queue.
 type Item struct {
-	value    string // The value of the item; arbitrary.
-	priority int    // The priority of the item in the queue.
+	Value    string // The value of the item; arbitrary.
+	Priority int    // The priority of the item in the queue.
 	// The index is needed by update and is maintained by the heap.Interface methods.
-	index int // The index of the item in the heap.
+	Index int // The index of the item in the heap.
 }
 
 // A PriorityQueue implements heap.Interface and holds Items.
@@ -22,22 +22,22 @@ func (pq PriorityQueue) Len() int { return len(pq) }
 
 func (pq PriorityQueue) Less(i, j int) bool {
 	// We want Pop to give us the highest, not lowest, priority so we use greater than here.
-	return pq[i].priority > pq[j].priority
+	return pq[i].Priority > pq[j].Priority
 }
 
 func (pq PriorityQueue) Swap(i, j int) {
 	pq[i], pq[j] = pq[j], pq[i]
-	pq[i].index = i
-	pq[j].index = j
+	pq[i].Index = i
+	pq[j].Index = j
 }
 
 func (pq *PriorityQueue) InitMessageQueue() {
 	if pq == nil {
 		pq := make(PriorityQueue, 100)
 		pq[0] = &Item{
-			value:    "initMessage",
-			priority: math.MinInt16,
-			index:    0,
+			Value:    "initMessage",
+			Priority: math.MinInt16,
+			Index:    0,
 		}
 		heap.Init(&pq)
 		return
@@ -47,7 +47,7 @@ func (pq *PriorityQueue) InitMessageQueue() {
 func (pq *PriorityQueue) Push(x interface{}) {
 	item := x.(*Item)
 	n := len(*pq)
-	item.index = n
+	item.Index = n
 	*pq = append(*pq, item)
 }
 
@@ -56,16 +56,16 @@ func (pq *PriorityQueue) Pop() interface{} {
 	n := len(old)
 	item := old[n-1]
 	old[n-1] = nil  // avoid memory leak
-	item.index = -1 // for safety
+	item.Index = -1 // for safety
 	*pq = old[0 : n-1]
 	return item
 }
 
 // update modifies the priority and value of an Item in the queue.
 func (pq *PriorityQueue) update(item *Item, value string, priority int) {
-	item.value = value
-	item.priority = priority
-	heap.Fix(pq, item.index)
+	item.Value = value
+	item.Priority = priority
+	heap.Fix(pq, item.Index)
 }
 
 // This example creates a PriorityQueue with some items, adds and manipulates an item,

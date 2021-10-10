@@ -13,15 +13,15 @@ import (
 var accountMap map[string]int
 
 type ReceivedPriority struct {
-	receivedCount []int
-	maxPriority   int
+	ReceivedCount   []int
+	MaxPriorityItem *Item
 }
 
 //track every message's received priority
-var messageReceivedCount map[string]ReceivedPriority
+var MessageReceivedCount map[string]ReceivedPriority
 
 func initMessageReceivedCount() {
-	messageReceivedCount = make(map[string]ReceivedPriority)
+	MessageReceivedCount = make(map[string]ReceivedPriority)
 }
 func initAccountMap() {
 	accountMap = make(map[string]int)
@@ -30,20 +30,21 @@ func initAccountMap() {
 func putMessage(message string, priority int) {
 	priorityInQueue := -1 * priority
 	item := &Item{
-		value:    message,
-		priority: priorityInQueue,
+		Value:    message,
+		Priority: priorityInQueue,
 	}
-	heap.Push(&messageQueue, item)
+	heap.Push(&MessageQueue, item)
 
 	nodeNum := priority % 100
 
 	receivedNodeArray := []int{nodeNum}
+
 	receivedPriority := &ReceivedPriority{
 		receivedNodeArray,
-		priority,
+		item,
 	}
-	messageReceivedCount[message] = *receivedPriority
-	fmt.Println("test putMessage [", message, "priority : ", priority, "] in messageQueue and messageReceivedCount")
+	MessageReceivedCount[message] = *receivedPriority
+	fmt.Println("test putMessage [", message, "item : ", item, "] in messageQueue and messageReceivedCount")
 	testMessageQueue()
 	if len(multicastGroup) == 1 {
 		executeTransactionInQueue()
@@ -51,40 +52,44 @@ func putMessage(message string, priority int) {
 }
 
 func updateMessageReceivedCount(message string, priority int) bool {
-	receivedPriority := messageReceivedCount[message]
+	receivedPriority := MessageReceivedCount[message]
 	nodeNum := priority % 100
 	var receivedNodeArray []int
-	if !contains(receivedPriority.receivedCount, nodeNum) {
-		receivedNodeArray = append(receivedPriority.receivedCount, nodeNum)
+	if !contains(receivedPriority.ReceivedCount, nodeNum) {
+		receivedNodeArray = append(receivedPriority.ReceivedCount, nodeNum)
 
 	} else {
-		receivedNodeArray = receivedPriority.receivedCount
+		receivedNodeArray = receivedPriority.ReceivedCount
 	}
 
 	// todo bug?
 	fmt.Println("test updateMessageReceivedCount receivedNodeArray : message = ", message, " priority = ", priority)
 	log.Println("test updateMessageReceivedCount receivedNodeArray : message = ", message, " priority = ", priority)
 
-	testMessageReceivedCount(receivedNodeArray)
+	// testMessageReceivedCount(receivedNodeArray)
 
-	if receivedPriority.maxPriority < priority {
+	item := receivedPriority.MaxPriorityItem
+	oldMaxPriority := -1 * item.Priority
+
+	if oldMaxPriority < priority {
+		item.Priority = -1 * priority
 		newReceivedPriority := &ReceivedPriority{
 			receivedNodeArray,
-			priority,
+			item,
 		}
-		messageReceivedCount[message] = *newReceivedPriority
-		fmt.Println("test updateMessageReceivedCount : length of receivedNodeArray : ", len(messageReceivedCount[message].receivedCount), "max priority :", messageReceivedCount[message].maxPriority)
-		log.Println("test updateMessageReceivedCount : length of receivedNodeArray : ", len(messageReceivedCount[message].receivedCount), "max priority :", messageReceivedCount[message].maxPriority)
-
+		MessageReceivedCount[message] = *newReceivedPriority
+		fmt.Println("test updateMessageReceivedCount : length of receivedNodeArray : ", len(MessageReceivedCount[message].ReceivedCount), "max priority :", MessageReceivedCount[message].MaxPriorityItem.Priority)
+		log.Println("test updateMessageReceivedCount : length of receivedNodeArray : ", len(MessageReceivedCount[message].ReceivedCount), "max priority :", MessageReceivedCount[message].MaxPriorityItem.Priority)
 		return true
+
 	} else {
 		newReceivedPriority := &ReceivedPriority{
 			receivedNodeArray,
-			receivedPriority.maxPriority,
+			item,
 		}
-		messageReceivedCount[message] = *newReceivedPriority
-		fmt.Println("test updateMessageReceivedCount : length of receivedNodeArray : ", len(messageReceivedCount[message].receivedCount), "max priority :", messageReceivedCount[message].maxPriority)
-		log.Println("test updateMessageReceivedCount : length of receivedNodeArray : ", len(messageReceivedCount[message].receivedCount), "max priority :", messageReceivedCount[message].maxPriority)
+		MessageReceivedCount[message] = *newReceivedPriority
+		fmt.Println("test updateMessageReceivedCount : length of receivedNodeArray : ", len(MessageReceivedCount[message].ReceivedCount), "max priority :", MessageReceivedCount[message].MaxPriorityItem.Priority)
+		log.Println("test updateMessageReceivedCount : length of receivedNodeArray : ", len(MessageReceivedCount[message].ReceivedCount), "max priority :", MessageReceivedCount[message].MaxPriorityItem.Priority)
 
 		return false
 	}
@@ -99,33 +104,27 @@ func contains(s []int, e int) bool {
 	return false
 }
 
-func testMessageReceivedCount(messageReceivedNode []int) {
-	for i := 0; i < len(messageReceivedNode); i++ {
-		fmt.Println("testMessageReceivedCount messageReceivedNode : i = ", i)
-		fmt.Println("testMessageReceivedCount messageReceivedNode : ", messageReceivedNode[i])
-	}
-}
-
 //start execution only when messageQueue is not empty
 //try to find executable transactionItem and deliver the transactionItem.
 func executeTransactionInQueue() {
-	if messageQueue.Len() > 1 {
+	if MessageQueue.Len() > 1 {
 		// fmt.Println("test executeTransactionInQueue : ")
 
-		transactionItem := heap.Pop(&messageQueue).(*Item)
-		nodeNumber := (transactionItem.priority * -1) % 100
+		// transactionItem := heap.Pop(&MessageQueue).(*Item)
+		transactionItem := MessageQueue[0]
+
+		nodeNumber := (transactionItem.Priority * -1) % 100
 		if _, ok := multicastGroup[nodeNumber]; !ok {
-			delete(messageReceivedCount, transactionItem.value)
+			delete(MessageReceivedCount, transactionItem.Value)
+			heap.Pop(&MessageQueue)
 			return
 		}
 
 		flag := true
 
-		messageReceivedNode := messageReceivedCount[transactionItem.value].receivedCount
-		fmt.Println("test MessageReceivedCount receivedNodeArray : message = ", transactionItem.value, " priority = ", transactionItem.priority)
-		log.Println("test MessageReceivedCount receivedNodeArray : message = ", transactionItem.value, " priority = ", transactionItem.priority)
-
-		testMessageReceivedCount(messageReceivedNode)
+		messageReceivedNode := MessageReceivedCount[transactionItem.Value].ReceivedCount
+		fmt.Println("test poped message : message = ", transactionItem.Value, " priority = ", transactionItem.Priority)
+		log.Println("test poped message : message = ", transactionItem.Value, " priority = ", transactionItem.Priority)
 
 		for k := range multicastGroup {
 			if !contains(messageReceivedNode, k) {
@@ -136,7 +135,7 @@ func executeTransactionInQueue() {
 		fmt.Println("test executeTransactionInQueue : flag = ", flag)
 		//if the received every node's priority of this message, deliver it. else put it back.
 		if flag {
-			messages := transactionItem.value
+			messages := transactionItem.Value
 			log.Println(getTimestamp(), "- Delivered: ", messages)
 			messageArray := strings.Split(messages, "/n")
 			for _, message := range messageArray {
@@ -159,11 +158,13 @@ func executeTransactionInQueue() {
 					fmt.Println("delivered transaction: ", message)
 				}
 			}
-			delete(messageReceivedCount, messages)
-			printBalance()
-		} else {
-			heap.Push(&messageQueue, transactionItem)
+			delete(MessageReceivedCount, messages)
+			heap.Pop(&MessageQueue)
+
 		}
+		// } else {
+		// 	heap.Push(&MessageQueue, transactionItem)
+		// }
 	}
 }
 
@@ -174,6 +175,7 @@ func deposit(client string, m string) {
 	} else {
 		accountMap[client] = money
 	}
+	printBalance()
 }
 
 func transfer(sender string, receiver string, m string) {
@@ -186,6 +188,7 @@ func transfer(sender string, receiver string, m string) {
 			} else {
 				accountMap[receiver] = money
 			}
+			printBalance()
 		}
 	}
 }

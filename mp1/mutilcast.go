@@ -1,6 +1,7 @@
 package main
 
 import (
+	"container/heap"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -152,10 +153,19 @@ func bufferMessage(priorityMessage PriorityMessage, nodeNumber int) {
 }
 
 func testMessageQueue() {
-	for i := 0; i < len(messageQueue); i++ {
-		// fmt.Println("test messageQueue : i = ", i)
-		// fmt.Println("test messageQueue : ", messageQueue[i].value, messageQueue[i].priority, "index : ", i)
+	for i := 0; i < len(MessageQueue); i++ {
+		log.Println("test messageQueue : i = ", i)
+		log.Println("test messageQueue : ", MessageQueue[i].Value, MessageQueue[i].Priority, "index : ", i)
 	}
+}
+
+func findMessageQueueIndex(item *Item) int {
+	for i := range MessageQueue {
+		if MessageQueue[i] == item {
+			return i
+		}
+	}
+	return -1
 }
 
 //todo debug update
@@ -163,21 +173,25 @@ func processReceivedMessage(message string, priority int) {
 	//put the message and its corresponding nodeNumber to messageReceivedCount.
 	//modify the messageQueue correspondingly
 	//as the priority queue pop() in descending order, the priority queue should be  -1 * priority
-	if _, ok := messageReceivedCount[message]; ok {
+	if _, ok := MessageReceivedCount[message]; ok {
+		log.Println("processReceivedMessage", message, priority)
 		changedMaxPriority := updateMessageReceivedCount(message, priority)
 		if changedMaxPriority {
-			priorityInQueue := -1 * messageReceivedCount[message].maxPriority
-			item := &Item{
-				value:    message,
-				priority: priorityInQueue,
-			}
+			// item := &Item{
+			// 	value:    message,
+			// 	priority: priorityInQueue,
+			// }
+			item := MessageReceivedCount[message].MaxPriorityItem
+			priorityInQueue := -1 * item.Priority
 			fmt.Println("test changedMaxPriority : ", message, "priority : ", priorityInQueue)
 			log.Println("test changedMaxPriority : ", message, "priority : ", priorityInQueue)
-			// testMessageQueue()
-
-			messageQueue.update(item, item.value, priorityInQueue)
+			testMessageQueue()
+			// MessageQueue.update(item, item.Value, priorityInQueue)
+			heap.Remove(&MessageQueue, findMessageQueueIndex(item))
+			MessageQueue.Push(item)
 		}
 	} else {
+		log.Println("not processReceivedMessage", message, priority)
 		//if the message is never received, push it into messageQueue and messageReceivedCount
 		putMessage(message, priority)
 

@@ -30,9 +30,7 @@ type PriorityMessage struct {
 }
 
 var ipAddress, _ = getIp()
-
-// var wg = sync.WaitGroup{}
-var messageQueue PriorityQueue
+var MessageQueue PriorityQueue
 var localNodeNumber int
 var timestamp int
 var Flog *os.File
@@ -46,7 +44,7 @@ func main() {
 	initBufferedMessageMap()
 	initMessageReceivedCount()
 	initAccountMap()
-	messageQueue.InitMessageQueue()
+	MessageQueue.InitMessageQueue()
 	allNodeConnected = false
 
 	// ./mp1_node {node id} {port} {config file}
@@ -140,7 +138,6 @@ func ioScanner() {
 	inputReader := bufio.NewReader(os.Stdin)
 	for {
 		// read message from stdin
-		fmt.Println("ioScanner")
 		temp, _, err := inputReader.ReadLine()
 		if err == io.EOF {
 			fmt.Println("An error occurred on reading stdin.")
@@ -150,6 +147,8 @@ func ioScanner() {
 		fmt.Println("read stdin:", input)
 		incrementTimeStamp()
 		priority := getLocalPriority()
+		input += " "
+		input += strconv.Itoa(priority)
 
 		putMessage(input, priority)
 		multicastInGroup(input, priority)
@@ -215,7 +214,6 @@ func readConfigFile(configFileName string) {
 		number := nodenum
 		hostname := DNSResolution(tempMessage[1])
 		port := tempMessage[2]
-		//nodeAddr := hostname + ":" + port
 		node := Node{
 			Name:     name,
 			Number:   number,
@@ -265,16 +263,3 @@ func getTimestamp() string {
 	}
 	return strconv.FormatInt(nowSecond, 10) + "." + nowMicro
 }
-
-// func setLog() {
-// 	filename := "Node" + strconv.Itoa(localNodeNumber) + "Result.log"
-// 	file := "Node" + strconv.Itoa(localNodeNumber) + "Result.log"
-// 	os.Remove(file)
-// 	var err error
-// 	Flog, err = os.OpenFile(filename, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
-// 	if err != nil {
-// 		log.Fatalf("error opening file: %v", err)
-// 	}
-// 	defer Flog.Close()
-// 	log.SetOutput(Flog)
-// }
